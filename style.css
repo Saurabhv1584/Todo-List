@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(135deg,rgb(28, 28, 130),rgb(22, 59, 168), indigo, violet, rgba(19, 138, 134, 0.632), rgba(19, 146, 137, 0.801));
+}
+
+  #container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid #e5e5e5; */
+  }
+  ul li {
+    padding: 10px;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+  }
+  ul li:hover {
+    background: #798ec9;
+  }
+  #list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #list label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #list label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 3px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  #list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  #list input:checked + label:before {
+    background: #46bf00;
+  } 
+  #list input:checked + label {
+    text-decoration: line-through;
+  }
+  .delete {
+    height: 28px;
+      padding: 5px 0px;
+      border-radius: 3px;
+  }
+  .delete:hover {
+    background: #fbf9f9;
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: rgb(188, 18, 18);
+  }
+  .add-task {
+    width: 100%;
+      outline: none;
+      font-size: 20px;
+      padding: 11px;
+      border: 1px solid #f3f3f3;
+      margin-bottom: 6px;
+  }
+  #total-tasks {
+    margin-bottom: 20px;
+    font-size: 16px;
+      margin-left: 2px;
+      color: rgb(202, 198, 198);
+  }
