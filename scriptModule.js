@@ -21,7 +21,7 @@ const TodoListApp= (function () {
         try{
         const response = await fetch('https://jsonplaceholder.typicode.com/todos');
         const data = await response.json();
-        tasks = data.slice(0,5);
+        tasks = data.slice(0,2);
         renderList();
         } catch(error){
             console.log(error);
